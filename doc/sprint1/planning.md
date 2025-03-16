@@ -3,59 +3,56 @@ RCOMP 2024-2025 Project - Sprint 1 planning
 ### Sprint master: 1230595 ###
 
 # 1. Sprint's backlog #
-(Copy here a summary of the provided sprint's backlog)
 
 | Task  | Task description                                                                             | Assignment |
-| :---: |:---------------------------------------------------------------------------------------------|:----------:|
-| T.1.1 | Development of a structured cabling project for building 1, encompassing the campus backbone |  1230596   |
-| T.1.2 | Development of a structured cabling project for building 2.                                  |  1220848   |
-| T.1.3 | Development of a structured cabling project for building 3.                                  |  1230595   |
-
-
-
+|:-----:|:---------------------------------------------------------------------------------------------|:----------:|
+| S1-T1 | Development of a structured cabling project for building 1, encompassing the campus backbone |  1230596   |
+| S1-T2 | Development of a structured cabling project for building 2.                                  |  1220848   |
+| S1-T3 | Development of a structured cabling project for building 3.                                  |  1230595   |
 
 # 2. Technical decisions and coordination #
 
-* The cabling infrastructure adopted was 568B, because it is mostly used in Europe
-* The copper cable type adopted was Category 6 Augmented (CAT7) since they cover frequency signals up to 500MHz, they are capable of transmitting signals up to 10Gbps. CAT6A cable is used to support data rates over 100 meters.
-  It also has similar capabilities to the Category 7 (CAT7) type cables and is less expensive. Not only that, CAT7 cables increased thickness makes them harder to work with.
-* For the telecommunication enclosures sizes, we decided to calculate the maximum that we would require and leave a minimum of 50% empty for future improvements use that as a standard across all buildings.
-* 4 Pair fibre cables were used in order to connect between the Intermediate Cross-Connect and the Main Cross-Connect with security.
-* Copper cables were in every other connection, with at least 2 cables connecting the Intermediate Cross-Connect and the Horizontal Cross-Connect for the same reason stated above.
-
-
-#### Examples: ####
-* Backbone cable types to be used
-* VLAN IDs to be used
-* VTP domains
-* WiFi channels
-* IPv4 networks' addresses and routers' addresses
-* Routing protocols, AS identifiers and area identifiers
-* Application protocols outlining (further coordination may be required between members)
-
-
+- Each floor has access points, each with a 25m range (radius). The APs are placed in
+  strategic locations to avoid overlap between floors and are connected to a ceiling outlet.
+  Also, different channels will be used to avoid interference.
+- The distance between two network outlets is less than 3 meters to improve accessibility.
+- Cross-connects are located in the recommended rooms in the project description.
+- Cable pathways were designed to minimize cable length, optimizing network performance and reducing material costs.
+- A cable raceway was installed in the dropped ceiling on Floor 1, as recommended in the project description, ensuring a clean and organized cabling infrastructure.
+- Multimode Fiber is used for high-speed network connections between Intermediate Cross-connects (IC) and Horizontal Cross-connects (HC).
+- CAT7 Copper Cables are used for connections between Horizontal Cross-connects (HC) and Network Outlets (RJ45).
 
 # 3. Subtasks assignment #
-(For each team member (sprint master included), the description of the assigned subtask in sprint 1)
 
-* 1230596 - Development of a structured cabling project for building A, encompassing the campus backbone(datacenter)
-    - Network outlets deployment schematic plan (including outlets for wireless access points and justification comments).
-    - Cross-connects deployment schematic plan and justification comments.
-    - Cable pathways deployment schematic plan and justification comments.
-
-
-* 1220848 - Development of a structured cabling project for building B.
-    - Network outlets deployment schematic plan (including outlets for wireless access points and justification comments).
-    - Cross-connects deployment schematic plan and justification comments.
-    - Cable pathways deployment schematic plan and justification comments.
+* 1230596 - Development of a structured cabling project for building 1, encompassing the campus backbone(datacenter)
+  - Demonstration of calculations regarding the number of network outlets for each room.
+  - Network outlets deployment schematic plan (including outlets for wireless access points)
+    and justification comments.
+  - Cross-connects deployment schematic plan and justification comments.
+  - Cable pathways deployment schematic plan and justification comments.
+  - Hardware inventories, including total cable lengths by cable type, appropriate patch
+    panels, network outlets, telecommunication enclosures of proper size.
 
 
-* 1230595 - Development of a structured cabling project for building C.
-    - Network outlets deployment schematic plan (including outlets for wireless access points and justification comments).
-    - Cross-connects deployment schematic plan and justification comments.
-    - Cable pathways deployment schematic plan and justification comments.
+* 1220848 - Development of a structured cabling project for building 2.
+  - Demonstration of calculations regarding the number of network outlets for each room.
+  - Network outlets deployment schematic plan (including outlets for wireless access points)
+    and justification comments.
+  - Cross-connects deployment schematic plan and justification comments.
+  - Cable pathways deployment schematic plan and justification comments.
+  - Hardware inventories, including total cable lengths by cable type, appropriate patch
+    panels, network outlets, telecommunication enclosures of proper size.
+
+
+* 1230595 - Development of a structured cabling project for building 3.
+  - Demonstration of calculations regarding the number of network outlets for each room.
+  - Network outlets deployment schematic plan (including outlets for wireless access points)
+    and justification comments.
+  - Cross-connects deployment schematic plan and justification comments.
+  - Cable pathways deployment schematic plan and justification comments.
+  - Hardware inventories, including total cable lengths by cable type, appropriate patch
+    panels, network outlets, telecommunication enclosures of proper size.
 
     
-
 
 
