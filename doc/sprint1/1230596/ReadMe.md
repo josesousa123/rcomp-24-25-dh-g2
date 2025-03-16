@@ -68,16 +68,17 @@ total_size: 6U
 
 ## Floor 0
 
-total_size: 12U
+Rack: 12U
 
-| Component                                 | Size |
-|-------------------------------------------|------|
-| UPS                                       | 1U   |
-| Fiber Patch Panel (Multimode, Backbone)   | 1U   |
-| Copper Patch Panel (CAT7, 48 ports)       | 1U   |
-| Switch 48 ports                           | 2U   |
-| Cable Management                          | 1U   |
-| Free Space for Future Expansion           | 6U   |
+| Component                                   | Size |
+|---------------------------------------------|------|
+| UPS                                         | 1U   |
+| Fiber Patch Panel (Multimode, Backbone) (2) | 1U   |
+| Copper Patch Panel (Multimode, Backbone)    | 1U   |
+| Copper Patch Panel (CAT7, 48 ports)         | 1U   |
+| Switch 48 ports (3)                         | 2U   |
+| Cable Management                            | 1U   |
+| Free Space for Future Expansion             | 6U   |
 
 ### Copper Cable CAT7 Calculations
 
@@ -96,7 +97,7 @@ total_size: 12U
 
 ## Floor 1
 
-total_size: 6U
+Rack: 6U
 
 | Component                                 | Size |
 |-------------------------------------------|------|
