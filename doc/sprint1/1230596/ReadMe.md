@@ -55,163 +55,82 @@ A **25m range access point** is positioned near **Rooms 1.1.3 and 1.1.4**, as th
 
 **Total Outlets:** 38 + 1 for access point
 
-# **Cross-Connects**
 
-## **Floor 0**
-Room **1.0.5** was chosen for the **Intermediate Cross-Connect (IC)** as it is directly below the datacenter (**Room 1.1.3**).
+## Enclosed Rack (Cabinet) for Consolidation Points
 
-A **19" rack format** is used, housing:
-- **Two 48-port patch panels**
-- **One 24-port patch panel**
-- **Two 48-port switches**
-- **One 24-port switch**
+total_size: 6U
 
-A **24U cabinet** is used, leaving 50% space for future expansion.
+| Component                                 | Size |
+|-------------------------------------------|------|
+| Copper Patch Panel (CAT7, 24 ports)       | 1U   |
+| Consolidation Point (24 ports)            | 1U   |
+| Free Space for Future Expansion           | 2U   |
 
-## **Floor 1**
-Room **1.1.3** (Datacenter) will house the **Main Cross-Connect (MC)**, linking the entire building to the **campus backbone**.
+## Floor 0
 
-A **redundant setup** includes **four copper cables** connecting the **MC to the IC on Floor 0**, ensuring fail-safe mechanisms.
-Additionally, an **8-core fiber cable** extends from the **MC to the technical ditch**, connecting to other buildings.
+total_size: 12U
 
-### **Total Cost for Building 1: 11840.52€**
+| Component                                 | Size |
+|-------------------------------------------|------|
+| UPS                                       | 1U   |
+| Fiber Patch Panel (Multimode, Backbone)   | 1U   |
+| Copper Patch Panel (CAT7, 48 ports)       | 1U   |
+| Switch 48 ports                           | 2U   |
+| Cable Management                          | 1U   |
+| Free Space for Future Expansion           | 6U   |
 
+### Copper Cable CAT7 Calculations
 
-
-## **Inventory**
-
-CP -> HC : ( 8.32 )
-
-
-Floor 0: 
-
-1.0.1: (23.24*4) = 92.96
-1.0.2: (10.27*4) = 41.08
-1.0.3: (7.24*4) = 28.96
-1.0.4: (4.21*4) = 16.84
-1.0.5: (11.33 * 10) = 113.3
-1.0.6: (14.1* 6)  = 84.6
-1.0.7: (25.74 * 8) = 205.92 
-
-Total legnth of Copper Cables : 583.66m  
-
-Floor 1:
-
-1.1.1: (11.72*6) = 70.32
-1.1.2: (8.6*6) = 51.6
-1.1.4: (17.47*6) = 104.82
-1.1.5: (26.88*10) = 268.8
-
-Total legnth of Copper Cables : 495.54
-
-
-
-Rack
-
-
------------------- MC (Floor 0 - Building 1) -----------------
-[01U] UPS
-[02U] Patch Panel CAT7 - 48 ports (Horizontal Cabling)
-[03-04U] Switch (Active Equipment)
-[05U] Cable Management
-[06U] Patch Panel Fibre (Backbone Cabling)
-
-Total used: 6U
-Recommended Rack Size: 12U (for 50% expansion)
+| Room    | Cable Length |
+|---------|--------------|
+| 1.0.1   | 92.96m       |
+| 1.0.2   | 41.08m       |
+| 1.0.3   | 28.96m       |
+| 1.0.4   | 16.84m       |
+| 1.0.5   | 113.3m       |
+| 1.0.6   | 84.6m        |
+| 1.0.7   | 205.92m      |
+| **Total** | **583.66m** |
 
 ---
 
-IC Floor 0:
-[01U] Patch Panel CAT7 - 48 ports
-[02U] Cable Management
-[03U] Patch Panel CAT7 - 24 ports
-[04U] Cable Management
-[05U] Switch 48 ports (Active Equipment)
-[06U] Cable Management
-[07U] Switch 24 ports (Active Equipment)
-[08U] Cable Management
+## Floor 1
 
-Total used: 8U
-Recommended Rack Size: 12U (for 50% expansion)
+total_size: 6U
 
----
+| Component                                 | Size |
+|-------------------------------------------|------|
+| Copper Patch Panel (CAT7, 48 ports)       | 1U   |
+| Switch 48 ports                           | 1U   |
+| Cable Management                          | 1U   |
+| Free Space for Future Expansion           | 3U   |
 
-HC Floor 0:
-
-[01U] Patch Panel CAT7 - 48 ports
-[02U] Switch 48 ports (Active Equipment)
-[03U] Cable Management
-
-Total used: 3U
-Recommended Rack Size: 6U (considering future expansion)
+| Room    | Copper CAT7 Cable Length |
+|---------|----------------------------|
+| 1.1.1   | 70.32m                       |
+| 1.1.2   | 51.6m                        |
+| 1.1.4   | 104.82m                      |
+| 1.1.5   | 268.8m                       |
+| **Total** | **495.54m**                 |
 
 ---
 
-Consolidation Points (CP):
+## Inventory
 
-CP 1 (Room 1.0.4):
-
-- 4 standard outlets + 1 CP outlet (cable consolidation)
-
-CP Room 1.0.6:
-- 6 outlets 
----
-
-### Outlet Summary per room (Floor 0):
-
-Room 1.0.1: 4 outlets  
-Room 1.0.2: 4 outlets  
-Room 1.0.3: 4 outlets  
-Room 1.0.4: 4 outlets + 1 CP  
-Room 1.0.5: 10 outlets + HC + IC  
-Room 1.0.6: 6 outlets + CP + AP + extra outlet (next to AP)  
-Room 1.0.7: 8 outlets (80m copper cable length each)
-
----
-
-
-Floor 1
-
-
------------------- HC (Floor 1 - Building 1) -----------------
-
-[01U] Patch Panel CAT7 - 48 ports (Horizontal Cabling)
-[02U] Switch 48 ports (Active Equipment)
-[03U] Cable Management
-
-Total used: 3U
-Recommended Rack Size: 6U (considering future expansion)
-
----
-
-Access Point Floor 1:
-
-- 25m Range Access Point positioned near Rooms 1.1.3 and 1.1.4
-- 1 dedicated outlet
-
----
-
-### Outlet Summary per room (Floor 1):
-
-Room 1.1.1: 6 outlets  
-Room 1.1.2: 6 outlets  
-Room 1.1.4: 6 outlets  
-Room 1.1.5: 10 outlets
-
-Total Outlets: 38 + 1 for Access Point
-
----
-
-### Cabling Notes (Floor 1):
-
-- Cabling via raceway above the floor, descending 1 meter to the outlets.
-
-
-
-
-
-
-
-
-
-
+| Item                                | Quantity                        |
+|-------------------------------------|---------------------------------|
+| Copper cable CAT7 total              | 1079.20m                       |
+| Optical fiber cable multimode        | N/A (Campus Backbone not included)|
+| Network Outlets (RJ45)               | 79                             |
+| Fiber Patch Panels (Multimode, 12 ports) | 1                           |
+| Copper Patch Panels (CAT7, 48 ports)      | 2                           |
+| Hybrid Switch (24 ports)             | 0                              |
+| Switch (48 ports)                    | 2                              |
+| UPS                                  | 1                               |
+| Access Points                        | 2                               |
+| Consolidation Points (24 ports)      | 3                               |
+| Enclosed Rack (12U)                  | 1                               |
+| Enclosed Rack (6U)                   | 1                               |
+| Copper CAT7 Patch Cords (0.5m)       | 79 + 2 (for APs)                |
+| Fiber (Multimode) Patch Cords (0.5m) | N/A                             |
+| Copper CAT7 Patch Cords (5m)         | 79                              |
