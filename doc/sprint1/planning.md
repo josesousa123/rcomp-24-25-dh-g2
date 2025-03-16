@@ -19,7 +19,7 @@ RCOMP 2022-2023 Project - Sprint 1 planning
 # 2. Technical decisions and coordination #
 
 * The cabling infrastructure adopted was 568B, because it is mostly used in Europe
-* The copper cable type adopted was Category 6 Augmented (CAT6A) since they cover frequency signals up to 500MHz, they are capable of transmitting signals up to 10Gbps. CAT6A cable is used to support data rates over 100 meters.
+* The copper cable type adopted was Category 6 Augmented (CAT7) since they cover frequency signals up to 500MHz, they are capable of transmitting signals up to 10Gbps. CAT6A cable is used to support data rates over 100 meters.
   It also has similar capabilities to the Category 7 (CAT7) type cables and is less expensive. Not only that, CAT7 cables increased thickness makes them harder to work with.
 * The connectors type adopted was RJ45 (8P8C).
 * For the telecommunication enclosures sizes, we decided to calculate the maximum that we would require and leave a minimum of 50% empty for future improvements use that as a standard across all buildings.
