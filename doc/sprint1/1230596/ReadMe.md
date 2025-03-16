@@ -82,16 +82,16 @@ Commercially available size above 14U is usually 15U, so we will use one.
 
 ## Floor 0
 
-Rack: 20U
+Rack: 24U
 
 | Component                                | Size |
 |------------------------------------------|------|
 | UPS                                      | 1U   |
 | Fiber Patch Panel (Multimode, Backbone)  | 3U   |
 | Copper Patch Panel (CAT7, 48 ports)      | 2U   |
-| Switch 48 ports (3)                      | 2U   |
+| Switch 48 ports (3)                      | 3U   |
 | Cable Management                         | 1U   |
-| Free Space for Future Expansion          | 9U   |
+| Free Space for Future Expansion          | 10U  |
 
 ### Copper Cable CAT7 Calculations
 
