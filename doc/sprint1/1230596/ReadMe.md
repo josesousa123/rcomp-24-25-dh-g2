@@ -66,6 +66,20 @@ total_size: 6U
 | Consolidation Point (24 ports)            | 1U   |
 | Free Space for Future Expansion           | 2U   |
 
+### Enclosed Rack (Cabinet) - Total 15U
+
+- IC Fiber Patch Panel (Multimode, 12 Ports) - 1U
+- IC Cooper Patch Panel (CAT7, 24 ports) - 1U
+- IC Switch (24 ports) - 1U
+- HC Fiber Patch Panel (Multimode, 12 Ports) - 1U
+- HC Cooper Patch Panel (CAT7, 24 ports) - 1U
+- HC Switch (24 ports) - 1U
+- UPS - 1U
+- Free Space for Future expansion - 7U (additional 100% over dimensioning)
+
+Commercially available size above 14U is usually 15U, so we will use one.
+
+
 ## Floor 0
 
 Rack: 12U
@@ -102,6 +116,7 @@ Rack: 6U
 | Component                                 | Size |
 |-------------------------------------------|------|
 | Copper Patch Panel (CAT7, 48 ports)       | 1U   |
+| Fiber Patch Panel (Multimode, Backbone) (2) | 1U   |
 | Switch 48 ports                           | 1U   |
 | Cable Management                          | 1U   |
 | Free Space for Future Expansion           | 3U   |
