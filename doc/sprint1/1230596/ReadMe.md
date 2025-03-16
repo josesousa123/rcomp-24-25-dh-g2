@@ -58,7 +58,7 @@ A **25m range access point** is positioned near **Rooms 1.1.3 and 1.1.4**, as th
 
 ## Enclosed Rack (Cabinet) for Consolidation Points
 
-total_size: 6U
+Rack: 6U
 
 | Component                                 | Size |
 |-------------------------------------------|------|
@@ -66,18 +66,7 @@ total_size: 6U
 | Consolidation Point (24 ports)            | 1U   |
 | Free Space for Future Expansion           | 2U   |
 
-### Enclosed Rack (Cabinet) - Total 15U
-
-- IC Fiber Patch Panel (Multimode, 12 Ports) - 1U
-- IC Cooper Patch Panel (CAT7, 24 ports) - 1U
-- IC Switch (24 ports) - 1U
-- HC Fiber Patch Panel (Multimode, 12 Ports) - 1U
-- HC Cooper Patch Panel (CAT7, 24 ports) - 1U
-- HC Switch (24 ports) - 1U
-- UPS - 1U
-- Free Space for Future expansion - 7U (additional 100% over dimensioning)
-
-Commercially available size above 14U is usually 15U, so we will use one.
+Commercially available telecommunications enclosures start at 6U, so we will use one of those.
 
 
 ## Floor 0
