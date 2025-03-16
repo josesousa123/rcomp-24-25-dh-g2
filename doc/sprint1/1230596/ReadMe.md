@@ -133,20 +133,25 @@ Rack: 6U
 
 ## Inventory
 
-| Item                                | Quantity                        |
-|-------------------------------------|---------------------------------|
-| Copper cable CAT7 total              | 1079.20m                       |
-| Optical fiber cable multimode        | N/A (Campus Backbone not included)|
-| Network Outlets (RJ45)               | 79                             |
-| Fiber Patch Panels (Multimode, 12 ports) | 1                           |
-| Copper Patch Panels (CAT7, 48 ports)      | 2                           |
-| Hybrid Switch (24 ports)             | 0                              |
-| Switch (48 ports)                    | 2                              |
-| UPS                                  | 1                               |
-| Access Points                        | 2                               |
-| Consolidation Points (24 ports)      | 3                               |
-| Enclosed Rack (12U)                  | 1                               |
-| Enclosed Rack (6U)                   | 1                               |
-| Copper CAT7 Patch Cords (0.5m)       | 79 + 2 (for APs)                |
-| Fiber (Multimode) Patch Cords (0.5m) | N/A                             |
-| Copper CAT7 Patch Cords (5m)         | 79                              |
+## INVENTORY
+
+|                **ITEM**                 | **FLOOR 0** | **FLOOR 1** |  **TOTAL**  |
+|:---------------------------------------:|:-----------:|:-----------:|:-----------:|
+|           Copper Cable (CAT7)           |   583.66m   |   495.54m   |  1079.20m   |
+|     Optical Fiber Cable (Multimode)     |      6      |     1.5     |     7.5     |
+|          Network Outlet (RJ45)          |     40      |     38      |     78      |
+| Fiber Patch Panel (Multimode, 12 Ports) |      1      |      0      |      1      |
+|   Copper Patch Panel (CAT7, 24 Ports)   |      0      |      0      |      0      |
+|   Copper Patch Panel (CAT7, 48 Ports)   |      1      |      1      |      2      |
+|            Switch (48 Ports)            |      1      |      1      |      2      |
+|                   UPS                   |      1      |      0      |      1      |
+|        Access Point (25m radius)        |      1      |      1      |      2      |
+|     Consolidation Point (24 Ports)      |      2      |      1      |      3      |
+|           Enclosed Rack (12U)           |      1      |      0      |      1      |
+|            Enclosed Rack (6U)           |      0      |      1      |      1      |
+|      Copper CAT7 Patch Cord (0.5m)      | 40 (+1 AP)  | 38 (+1 AP)  | 78 (+2 APs) |
+|   Fiber (Multimode) Patch Cord (0.5m)   |      36      |     12      |     48      |
+|       Copper CAT7 Patch Cord (5m)       |     40      |     38      |     78      |
+
+_*_ Campus Backbone Optical Fiber Cable (Multimode) not included in this Inventory.
+
