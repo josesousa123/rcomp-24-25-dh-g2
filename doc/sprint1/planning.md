@@ -56,3 +56,21 @@ RCOMP 2024-2025 Project - Sprint 1 planning
     
 
 
+
+
+
+
+Changes derived from the Sprint 1 Review:
+
+Changed the location Cabintet from Building 1 from Floor 0 to Floor 1  
+More commits
+Downsized the amount of patch panels
+Downsized the amount of Consolidation Points 
+
+
+
+
+
+
+
+
