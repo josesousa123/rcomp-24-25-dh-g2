@@ -68,6 +68,15 @@ Downsized the amount of patch panels
 Downsized the amount of Consolidation Points 
 
 
+Switch Model : Pt - Empty
+
+Phone Model : 7960
+
+Router Model : 2811
+
+
+List of VLANs used : 
+
 
 
 
