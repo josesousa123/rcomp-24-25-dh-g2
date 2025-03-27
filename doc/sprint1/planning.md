@@ -74,8 +74,20 @@ Phone Model : 7960
 
 Router Model : 2811
 
+VTP Domain: r2425dhg2
 
 List of VLANs used : 
+
+Buiding_1: 390-397
+Building_2: 398-405
+Building_3: 406-411
+
+Ipv4 addresses: 
+
+Block of IPv4 address: 10.24.32.0/20
+
+ISP router’s IPv4 node address: 87.5.127.205/30
+
 
 
 
