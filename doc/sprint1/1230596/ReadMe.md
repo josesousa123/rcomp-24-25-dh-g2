@@ -69,18 +69,39 @@ Rack: 6U
 Commercially available telecommunications enclosures start at 6U, so we will use one of those.
 
 
-## Floor 0
+## Floor 1
 
-Rack: 24U
+Rack: 21U
 
 | Component                                | Size |
 |------------------------------------------|------|
 | UPS                                      | 1U   |
-| Fiber Patch Panel (Multimode, Backbone)  | 3U   |
-| Copper Patch Panel (CAT7, 48 ports)      | 2U   |
+| Fiber Patch Panel (Multimode, Backbone)  | 1U   |
+| Copper Patch Panel (CAT7, 48 ports)      | 1U   |
 | Switch 48 ports (3)                      | 3U   |
 | Cable Management                         | 1U   |
 | Free Space for Future Expansion          | 10U  |
+
+| Room    | Copper CAT7 Cable Length |
+|---------|----------------------------|
+| 1.1.1   | 70.32m                       |
+| 1.1.2   | 51.6m                        |
+| 1.1.4   | 104.82m                      |
+| 1.1.5   | 268.8m                       |
+| **Total** | **495.54m**                 |
+---
+
+## Floor 0
+
+Rack: 6U
+
+| Component                                 | Size |
+|-------------------------------------------|------|
+| Copper Patch Panel (CAT7, 48 ports)       | 1U   |
+| Fiber Patch Panel (Multimode, Backbone) (2) | 1U   |
+| Switch 48 ports                           | 1U   |
+| Free Space for Future Expansion           | 3U   |
+
 
 ### Copper Cable CAT7 Calculations
 
@@ -94,27 +115,6 @@ Rack: 24U
 | 1.0.6   | 84.6m        |
 | 1.0.7   | 205.92m      |
 | **Total** | **583.66m** |
-
----
-
-## Floor 1
-
-Rack: 6U
-
-| Component                                 | Size |
-|-------------------------------------------|------|
-| Copper Patch Panel (CAT7, 48 ports)       | 1U   |
-| Fiber Patch Panel (Multimode, Backbone) (2) | 1U   |
-| Switch 48 ports                           | 1U   |
-| Free Space for Future Expansion           | 3U   |
-
-| Room    | Copper CAT7 Cable Length |
-|---------|----------------------------|
-| 1.1.1   | 70.32m                       |
-| 1.1.2   | 51.6m                        |
-| 1.1.4   | 104.82m                      |
-| 1.1.5   | 268.8m                       |
-| **Total** | **495.54m**                 |
 
 ---
 
