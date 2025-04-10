@@ -12,13 +12,6 @@ Building 1  block:
     HostMax:   10.24.35.254
     Hosts/Net: 1022
 
-        Backbone: VLAN Name CAMPUS-BACKBONE, VLANID 390 -> (for 220 nodes)
-            Network:   10.24.32.0/24
-            Broadcast: 10.24.32.255
-            HostMin:   10.24.32.1
-            HostMax:   10.24.32.254
-            Hosts/Net: 254
-
         Building 1 Ground Floor: VLAN Name B1-F0, VLANID 391 -> (for 40 nodes)
             Network:   10.24.33.192/26
             Broadcast: 10.24.33.255
