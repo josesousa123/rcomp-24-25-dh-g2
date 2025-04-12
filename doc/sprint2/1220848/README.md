@@ -26,29 +26,31 @@ B2-VoIP -> 10.24.37.1 /25
 255.255.255.128 = 25
 255.255.255.192 = 26
 
-route table:
-ip route 0.0.0.0 0.0.0.0 10.24.32.1
+B1-PC1 -> 10.24.33.200 /26
+PC2 -> 10.24.33.130 /26
 
-------------------------------
+10.24.44.1 -> RT-BK
+10.24.44.2 -> RT-B1
+10.24.44.3 -> RT-B2
+10.24.44.4 -> RT-B3
 
-route table bk:
+FastEthernet1/0.390    10.24.44.3      YES manual up                    up
+FastEthernet1/0.396    10.24.38.1      YES manual up                    up 
 
-ip route 10.24.34.192 255.255.255.192
-ip route 10.24.34.128 255.255.255.192
-ip route 10.24.33.128 255.255.255.128
-ip route 10.24.33.0 255.255.255.128
-ip route 10.24.34.0 255.255.255.128
 
-ip route 10.24.38.0 255.255.255.128
-ip route 10.24.37.128 255.255.255.128
-ip route 10.24.36.0 255.255.255.0
-ip route 10.24.38.128 255.255.255.192
-ip route 10.24.37.0 255.255.255.128
-
-ip route 10.24.43.0 255.255.255.128
-ip route 10.24.42.0 255.255.255.0
-ip route 10.24.40.0 255.255.255.0
-ip route 10.24.43.128 255.255.255.192
-ip route 10.24.41.0 255.255.255.0
-
-ip route 0.0.0.0 0.0.0.0 87.5.127.205
+Vlan390                10.24.44.1      YES manual up                    up
+Vlan391                10.24.33.193    YES manual up                    up
+Vlan392                10.24.33.129    YES manual up                    up
+Vlan393                10.24.32.129    YES manual up                    up
+Vlan394                10.24.32.1      YES manual up                    up
+Vlan395                10.24.33.1      YES manual up                    up
+Vlan396                10.24.38.1      YES manual up                    up
+Vlan397                10.24.37.129    YES manual up                    up
+Vlan398                10.24.36.1      YES manual up                    up
+Vlan399                10.24.38.129    YES manual up                    up
+Vlan400                10.24.37.1      YES manual up                    up
+Vlan401                10.24.43.1      YES manual up                    up
+Vlan402                10.24.42.1      YES manual up                    up
+Vlan403                10.24.40.1      YES manual up                    up
+Vlan404                10.24.43.129    YES manual up                    up
+Vlan405                10.24.41.1      YES manual up                    up
