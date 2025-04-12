@@ -4,7 +4,7 @@ no service timestamps log datetime msec
 no service timestamps debug datetime msec
 no service password-encryption
 !
-hostname SW-HC-B1-F0
+hostname SW-IC-B3
 !
 !
 !
@@ -15,18 +15,18 @@ spanning-tree mode pvst
 spanning-tree extend system-id
 !
 interface FastEthernet0/1
+ switchport mode trunk
 !
-interface GigabitEthernet1/1
- switchport access vlan 393
+interface FastEthernet1/1
 !
-interface GigabitEthernet2/1
- switchport access vlan 395
+interface FastEthernet2/1
+ switchport mode trunk
 !
-interface GigabitEthernet3/1
- switchport access vlan 391
+interface FastEthernet3/1
+ switchport mode trunk
 !
 interface FastEthernet4/1
- switchport access vlan 394
+ switchport mode trunk
 !
 interface Vlan1
  no ip address
