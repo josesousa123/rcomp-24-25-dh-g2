@@ -4,7 +4,7 @@ no service timestamps log datetime msec
 no service timestamps debug datetime msec
 no service password-encryption
 !
-hostname SW-MC-B1
+hostname SW-IC-B2
 !
 !
 !
@@ -18,6 +18,13 @@ interface FastEthernet0/1
  switchport mode trunk
 !
 interface FastEthernet1/1
+!
+interface FastEthernet2/1
+!
+interface FastEthernet3/1
+ switchport mode trunk
+!
+interface FastEthernet4/1
  switchport mode trunk
 !
 interface Vlan1
