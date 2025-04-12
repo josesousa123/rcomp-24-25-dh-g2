@@ -53,43 +53,6 @@ RCOMP 2024-2025 Project - Sprint 1 planning
   - Hardware inventories, including total cable lengths by cable type, appropriate patch
     panels, network outlets, telecommunication enclosures of proper size.
 
-    
-
-
-
-
-
-
-Changes derived from the Sprint 1 Review:
-
-Changed the location Cabintet from Building 1 from Floor 0 to Floor 1  
-More commits
-Downsized the amount of patch panels
-Downsized the amount of Consolidation Points 
-
-
-Switch Model : Pt - Empty
-
-Phone Model : 7960
-
-Router Model : 2811
-
-VTP Domain: r2425dhg2
-
-List of VLANs used : 
-
-Buiding_1: 390-397
-Building_2: 398-405
-Building_3: 406-411
-
-Ipv4 addresses: 
-
-Block of IPv4 address: 10.24.32.0/20
-
-ISP router’s IPv4 node address: 87.5.127.205/30
-
-
-
 
 
 
