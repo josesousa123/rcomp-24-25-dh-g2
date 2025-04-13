@@ -7,9 +7,9 @@ RCOMP 2024-2025 - Sprint 1 Review
 
 | Task ID | Description                                                         | Assigned To |
 |---------|---------------------------------------------------------------------|-------------|
-| S1-T1   | Structured cabling design for Building 1, including campus backbone | 1220848     |
-| S1-T2   | Structured cabling design for Building 2                            | 1230596     |
-| S1-T3   | Structured cabling design for Building 3                            | 1230595     |
+| T.1.1   | Structured cabling design for Building 1, including campus backbone | 1220848     |
+| T.1.2   | Structured cabling design for Building 2                            | 1230596     |
+| T.1.3   | Structured cabling design for Building 3                            | 1230595     |
 
 ## Task Completion Evaluation ##
 

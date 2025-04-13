@@ -6,46 +6,46 @@ Class / Team number / IPv4 address space to be used (Block of IPv4 addresses) / 
 
 
 Building 1  block:
-    Network:   10.24.32.0/22
-    Broadcast: 10.24.35.255
-    HostMin:   10.24.32.1
-    HostMax:   10.24.35.254
-    Hosts/Net: 1022
+    Network:   10.24.32.0/22         00001010.00011000.001000 00.00000000 (Class A)
+    Broadcast: 10.24.35.255          00001010.00011000.001000 11.11111111
+    HostMin:   10.24.32.1            00001010.00011000.001000 00.00000001
+    HostMax:   10.24.35.254          00001010.00011000.001000 11.11111110
+    Hosts/Net: 1022                  (Private Internet)
 
         Building 1 Ground Floor: VLAN Name B1-F0, VLANID 391 -> (for 40 nodes)
-            Network:   10.24.33.192/26
-            Broadcast: 10.24.33.255
-            HostMin:   10.24.33.193
-            HostMax:   10.24.33.254
-            Hosts/Net: 62
+            Network:   10.24.33.192/26       00001010.00011000.00100001.11 000000 (Class A)
+            Broadcast: 10.24.33.255          00001010.00011000.00100001.11 111111
+            HostMin:   10.24.33.193          00001010.00011000.00100001.11 000001
+            HostMax:   10.24.33.254          00001010.00011000.00100001.11 111110
+            Hosts/Net: 62                    (Private Internet)
 
         Building 1 Floor One: VLAN Name B1-F1, VLANID 392 -> (for 45 nodes)
-            Network:   10.24.33.128/26
-            Broadcast: 10.24.33.191
-            HostMin:   10.24.33.129
-            HostMax:   10.24.33.190
-            Hosts/Net: 62
+            Network:   10.24.33.128/26       00001010.00011000.00100001.10 000000 (Class A)
+            Broadcast: 10.24.33.191          00001010.00011000.00100001.10 111111
+            HostMin:   10.24.33.129          00001010.00011000.00100001.10 000001
+            HostMax:   10.24.33.190          00001010.00011000.00100001.10 111110
+            Hosts/Net: 62                    (Private Internet)
 
         Building 1 Wi-Fi: VLAN Name B1-WIFI, VLANID 393 -> (for 95 nodes)
-            Network:   10.24.32.128/25
-            Broadcast: 10.24.32.255
-            HostMin:   10.24.32.129
-            HostMax:   10.24.32.254
-            Hosts/Net: 126
+            Network:   10.24.32.128/25       00001010.00011000.00100000.1 0000000 (Class A)
+            Broadcast: 10.24.32.255          00001010.00011000.00100000.1 1111111
+            HostMin:   10.24.32.129          00001010.00011000.00100000.1 0000001
+            HostMax:   10.24.32.254          00001010.00011000.00100000.1 1111110
+            Hosts/Net: 126                   (Private Internet)
 
         Building 1 DMZ: VLAN Name B1-DMZ, VLANID 394 -> (for 110 nodes)
-            Network:   10.24.32.0/25
-            Broadcast: 10.24.32.127
-            HostMin:   10.24.32.1
-            HostMax:   10.24.32.126
-            Hosts/Net: 126
+            Network:   10.24.32.0/25         00001010.00011000.00100000.0 0000000 (Class A)
+            Broadcast: 10.24.32.127          00001010.00011000.00100000.0 1111111
+            HostMin:   10.24.32.1            00001010.00011000.00100000.0 0000001
+            HostMax:   10.24.32.126          00001010.00011000.00100000.0 1111110
+            Hosts/Net: 126                   (Private Internet)
 
         Building 1 VoIP: VLAN Name B1-VoIP, VLANID 395 -> (for 70 nodes)
-            Network:   10.24.33.0/25
-            Broadcast: 10.24.33.127
-            HostMin:   10.24.33.1
-            HostMax:   10.24.33.126
-            Hosts/Net: 126
+            Network:   10.24.33.0/25         00001010.00011000.00100001.0 0000000 (Class A)
+            Broadcast: 10.24.33.127          00001010.00011000.00100001.0 1111111
+            HostMin:   10.24.33.1            00001010.00011000.00100001.0 0000001
+            HostMax:   10.24.33.126          00001010.00011000.00100001.0 1111110
+            Hosts/Net: 126                   (Private Internet)
 
 
 

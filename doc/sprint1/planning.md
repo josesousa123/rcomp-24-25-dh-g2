@@ -6,9 +6,9 @@ RCOMP 2024-2025 Project - Sprint 1 planning
 
 | Task  | Task description                                                                             | Assignment |
 |:-----:|:---------------------------------------------------------------------------------------------|:----------:|
-| S1-T1 | Development of a structured cabling project for building 1, encompassing the campus backbone |  1230596   |
-| S1-T2 | Development of a structured cabling project for building 2.                                  |  1220848   |
-| S1-T3 | Development of a structured cabling project for building 3.                                  |  1230595   |
+| T.1.1 | Development of a structured cabling project for building 1, encompassing the campus backbone |  1230596   |
+| T.1.2 | Development of a structured cabling project for building 2.                                  |  1220848   |
+| T.1.3 | Development of a structured cabling project for building 3.                                  |  1230595   |
 
 # 2. Technical decisions and coordination #
 
