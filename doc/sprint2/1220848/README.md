@@ -1,56 +1,42 @@
-ISP -> 87.5.127.205 /30
-255.255.255.252 = 30
+## BUILDING 2 INFORMATION
+- End user outlets on the ground floor: 100 nodes
+- End user outlets on floor one: 110 nodes
+- Wi-Fi network: 200 nodes
+- DMZ (Servers, administration workstations, and network infrastructure devices): 60 nodes
+- VoIP (IP-phones): 120 nodes
 
-PC1-B2-F0 -> 10.24.38.10 /25
-PC2-B2-F0 -> 10.24.38.20 /25
+## HARDWARE BUILDING 2 ##
 
-PC3-B2-F1 -> 10.24.37.130 /25
-PC4-B2-F1 -> 10.24.37.140 /25
+| Hardware ID     | Name                       |
+|-----------------|----------------------------|
+| RT-B2           | Router                     |
+| SW-IC-B2        | Intermediate Cross-connect |
+| SW-HC-B2-F0     | Horizontal Cross-connect   |
+| SW-HC-B2-F1     | Horizontal Cross-connect   |
+| SW-CP-B2-F0     | Consolidation Point        |
+| SW-CP-B2-F1     | Consolidation Point        |
+| AP1-B2-F0       | Access Point               |
+| AP2-B2-F0       | Access Point               |
+| AP3-B2-F1       | Access Point               |
+| AP4-B2-F1       | Access Point               |
+| Server1-B2-F0   | Server                     |
+| IP_Phone1-B2-F0 | Phone                      |
+| PC1-B2-F0       | PC                         |
+| PC2-B2-F1       | PC                         |
+| Laptop1-B2-F1   | Laptop                     |
 
-Laptop1-B2-F0 -> 10.24.36.10 /24
-Laptop2-B2-F1 -> 10.24.36.20 /24
+## VLANs BUILDING 2 ##
 
-Server-B2-F0 -> 10.24.38.130 /26
+- **BUILDING 2 NETWORK:** 10.24.36.0/22
 
-Router-Backbone -> 10.24.32.1 /24
-Router-B2 -> 
+| VLAN ID | VLAN Name |     Network      |   Host Min   |   Host Max   |  Broadcast   |
+|:-------:|:---------:|:----------------:|:------------:|:------------:|:------------:|
+|   396   |   B2-F0   |  10.24.38.0 /25  |  10.24.38.1  | 10.24.38.126 | 10.24.38.127 |
+|   397   |   B2-F1   | 10.24.37.128 /25 | 10.24.37.129 | 10.24.37.254 | 10.24.37.255 |
+|   398   |  B2-WIFI  |  10.24.36.0 /24  |  10.24.36.1  | 10.24.36.254 | 10.24.36.255 |
+|   399   |  B2-DMZ   | 10.24.38.128 /26 | 10.24.38.129 | 10.24.38.190 | 10.24.38.191 |
+|   400   |  B2-VoIP  |  10.24.37.0 /25  |  10.24.37.1  | 10.24.37.126 | 10.24.37.127 |
 
-default gateways
-B2-F0 -> 10.24.38.1 /25
-B2-F1 -> 10.24.37.129 /25
-B2-WIFI -> 10.24.36.1 /24
-B2-DMZ -> 10.24.38.129 /26
-B2-VoIP -> 10.24.37.1 /25
+## BUILDING 2 SIMULATION ##
 
-255.255.255.0 = 24
-255.255.255.128 = 25
-255.255.255.192 = 26
-
-B1-PC1 -> 10.24.33.200 /26
-PC2 -> 10.24.33.130 /26
-
-10.24.44.1 -> RT-BK
-10.24.44.2 -> RT-B1
-10.24.44.3 -> RT-B2
-10.24.44.4 -> RT-B3
-
-FastEthernet1/0.390    10.24.44.3      YES manual up                    up
-FastEthernet1/0.396    10.24.38.1      YES manual up                    up 
-
-
-Vlan390                10.24.44.1      YES manual up                    up
-Vlan391                10.24.33.193    YES manual up                    up
-Vlan392                10.24.33.129    YES manual up                    up
-Vlan393                10.24.32.129    YES manual up                    up
-Vlan394                10.24.32.1      YES manual up                    up
-Vlan395                10.24.33.1      YES manual up                    up
-Vlan396                10.24.38.1      YES manual up                    up
-Vlan397                10.24.37.129    YES manual up                    up
-Vlan398                10.24.36.1      YES manual up                    up
-Vlan399                10.24.38.129    YES manual up                    up
-Vlan400                10.24.37.1      YES manual up                    up
-Vlan401                10.24.43.1      YES manual up                    up
-Vlan402                10.24.42.1      YES manual up                    up
-Vlan403                10.24.40.1      YES manual up                    up
-Vlan404                10.24.43.129    YES manual up                    up
-Vlan405                10.24.41.1      YES manual up                    up
+![building2.png](building2.png)

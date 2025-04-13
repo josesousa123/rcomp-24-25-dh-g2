@@ -101,15 +101,14 @@ those.
 ### Enclosed Rack (Cabinet) - Total 15U
 
 - IC Fiber Patch Panel (Multimode, 12 Ports) - 1U
-- IC Cooper Patch Panel (CAT7, 24 ports) - 1U
 - IC Switch (24 ports) - 1U
 - HC Fiber Patch Panel (Multimode, 12 Ports) - 1U
 - HC Cooper Patch Panel (CAT7, 24 ports) - 1U
 - HC Switch (24 ports) - 1U
 - UPS - 1U
-- Free Space for Future expansion - 7U (additional 100% over dimensioning)
+- Free Space for Future expansion - 6U (additional 100% over dimensioning)
 
-Commercially available size above 14U is usually 15U, so we will use one.
+Commercially available size above 12U is usually 15U, so we will use one.
 
 ### Cooper Cable CAT7 Calculations for Ground Floor
 
