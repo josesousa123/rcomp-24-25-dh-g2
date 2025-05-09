@@ -2,7 +2,7 @@
 
 ## 1. OSPF dynamic routing
 
-* Existing static routing tables on building 3 were erased
+* Existing static routing tables on building 3 were erased.
 
 ### **Building 3 OSPF**:
 
