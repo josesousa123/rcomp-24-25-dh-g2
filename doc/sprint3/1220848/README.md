@@ -144,7 +144,41 @@ ip dhcp excluded-address 10.24.37.1
 
 ## 6. NAT (Network Address Translation)
 
+### Interface configuration
+```
+interface FastEthernet1/0.396
+    ip nat inside
+    exit
+interface FastEthernet1/0.397
+    ip nat inside
+    exit
+interface FastEthernet1/0.398
+    ip nat inside
+    exit
+interface FastEthernet1/0.399
+    ip nat inside
+    exit
+interface FastEthernet1/0.400
+    ip nat inside
+    exit
+    
+interface FastEthernet1/0.390
+    ip nat outside
+    exit
+```
 
+## Redirection
+
+```bash
+# Redirect HTTP/HTTPS requests to our internal HTTPS server
+ip nat inside source static tcp 10.24.38.140 80 10.24.44.3 80
+ip nat inside source static tcp 10.80.163.35 443 10.24.44.3 443
+
+# Redirect DNS requests to our internal DNS server
+ip nat inside source static tcp 10.24.38.140 53 10.24.44.3 53
+ip nat inside source static udp 10.24.38.140 53 10.24.44.3 53
+
+```
 
 ## 7. Static Firewall (ACLs)
 
