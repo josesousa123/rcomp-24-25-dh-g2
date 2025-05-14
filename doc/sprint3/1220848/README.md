@@ -2,8 +2,14 @@
 
 ## 1. OSPF dynamic routing
 
-// TODO
-
+- Existing static routing tables on building 2 were erased.
+### **Building 2 OSPF**:
+  ```
+  router ospf 1
+    router-id 10.24.44.3
+    network 10.24.44.0 0.0.0.255 area 0
+    network 10.24.36.0 0.0.3.255 area 2
+  ```
 
 ## 2. HTTP servers
 
