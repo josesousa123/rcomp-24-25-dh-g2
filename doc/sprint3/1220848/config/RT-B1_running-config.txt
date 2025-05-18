@@ -9,7 +9,33 @@ hostname RT-B1
 !
 !
 !
+ip dhcp excluded-address 10.24.33.193
+ip dhcp excluded-address 10.24.33.129
+ip dhcp excluded-address 10.24.32.129
+ip dhcp excluded-address 10.24.32.1 10.24.32.126
+ip dhcp excluded-address 10.24.33.1
 !
+ip dhcp pool b1-f0
+ network 10.24.33.192 255.255.255.192
+ default-router 10.24.33.193
+ dns-server 10.24.32.10
+ domain-name rcomp-24-25-dh-g2
+ip dhcp pool b1-f1
+ network 10.24.33.128 255.255.255.192
+ default-router 10.24.33.129
+ dns-server 10.24.32.10
+ domain-name rcomp-24-25-dh-g2
+ip dhcp pool b1-wifi
+ network 10.24.32.128 255.255.255.128
+ default-router 10.24.32.129
+ dns-server 10.24.32.10
+ domain-name rcomp-24-25-dh-g2
+ip dhcp pool b1-voip
+ network 10.24.33.0 255.255.255.128
+ default-router 10.24.33.1
+ option 150 ip 10.24.33.1
+ dns-server 10.24.32.10
+ domain-name rcomp-24-25-dh-g2
 !
 !
 !
@@ -52,37 +78,36 @@ interface FastEthernet0/1
 !
 interface FastEthernet1/0
  no ip address
- no shutdown
 !
 interface FastEthernet1/0.390
  encapsulation dot1Q 390
  ip address 10.24.44.2 255.255.255.0
- no shutdown
+ ip nat outside
 !
 interface FastEthernet1/0.391
  encapsulation dot1Q 391
  ip address 10.24.33.193 255.255.255.192
- no shutdown
+ ip nat inside
 !
 interface FastEthernet1/0.392
  encapsulation dot1Q 392
  ip address 10.24.33.129 255.255.255.192
- no shutdown
+ ip nat inside
 !
 interface FastEthernet1/0.393
  encapsulation dot1Q 393
  ip address 10.24.32.129 255.255.255.128
- no shutdown
+ ip nat inside
 !
 interface FastEthernet1/0.394
  encapsulation dot1Q 394
  ip address 10.24.32.1 255.255.255.128
- no shutdown
+ ip nat inside
 !
 interface FastEthernet1/0.395
  encapsulation dot1Q 395
  ip address 10.24.33.1 255.255.255.128
- no shutdown
+ ip nat inside
 !
 interface Vlan1
  no ip address
@@ -90,9 +115,15 @@ interface Vlan1
 !
 router ospf 1
  router-id 10.24.44.2
+ log-adjacency-changes
  network 10.24.44.0 0.0.0.255 area 0
  network 10.24.32.0 0.0.3.255 area 1
+ default-information originate
 !
+ip nat inside source static tcp 10.24.32.15 80 10.24.44.2 80 
+ip nat inside source static tcp 10.24.32.15 443 10.24.44.2 443 
+ip nat inside source static tcp 10.24.32.10 53 10.24.44.2 53 
+ip nat inside source static udp 10.24.32.10 53 10.24.44.2 53 
 ip classless
 !
 ip flow-export version 9
@@ -102,6 +133,42 @@ ip flow-export version 9
 !
 !
 !
+!
+dial-peer voice 1 voip
+ destination-pattern 1...
+ session target ipv4:10.24.44.2
+!
+dial-peer voice 2 voip
+ destination-pattern 2...
+ session target ipv4:10.24.44.3
+!
+dial-peer voice 3 voip
+ destination-pattern 3...
+ session target ipv4:10.24.44.4
+!
+telephony-service
+ max-ephones 20
+ max-dn 20
+ ip source-address 10.24.33.1 port 2000
+ auto assign 1 to 2
+!
+ephone-dn 1
+ number 1001
+!
+ephone-dn 2
+ number 1002
+!
+ephone 1
+ device-security-mode none
+ mac-address 00D0.BAEE.21A3
+ type 7960
+ button 1:1
+!
+ephone 2
+ device-security-mode none
+ mac-address 000B.BEA4.4A09
+ type 7960
+ button 1:2
 !
 line con 0
 !

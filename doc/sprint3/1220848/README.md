@@ -19,7 +19,6 @@
 
 ![b2-html-page](./config/b2-html-page.png)
 
-
 ## 3. DHCPv4 service
 
 ### Excluded Addresses
@@ -93,11 +92,10 @@ ip dhcp excluded-address 10.24.37.1
 - Automatic phone registration and directory number assignment
     ```
     telephony-service
-        auto-reg-ephone
         ip source-address 10.24.37.1 port 2000
         max-ephones 20
         max-dn 20
-        auto assign 11 to 20
+        auto assign 1 to 2
     exit
     
     ephone-dn 1
@@ -177,8 +175,8 @@ interface FastEthernet1/0.390
 
 ```bash
 # Redirect HTTP/HTTPS requests to our internal HTTPS server
-ip nat inside source static tcp 10.24.38.140 80 10.24.44.3 80
-ip nat inside source static tcp 10.80.163.35 443 10.24.44.3 443
+ip nat inside source static tcp 10.24.38.145 80 10.24.44.3 80 
+ip nat inside source static tcp 10.24.38.145 443 10.24.44.3 443 
 
 # Redirect DNS requests to our internal DNS server
 ip nat inside source static tcp 10.24.38.140 53 10.24.44.3 53

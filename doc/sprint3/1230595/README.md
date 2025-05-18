@@ -15,7 +15,7 @@ router ospf 1
 
 ## 2. HTTP servers
 
-* **Server-HTTP-B3-F0:** `10.24.43.130 /26`
+* **Server-HTTP-B3-F0:** `10.24.43.145 /26`
 
 ### **Home Page for Building 3**:
 
@@ -41,8 +41,8 @@ ip dhcp excluded-address 10.24.41.1
   ip dhcp pool b3-f0
       default-router 10.24.43.1
       network 10.24.43.0 255.255.255.128
-      dns-server 10.24.43.130
-      domain-name building-3.rcomp-24-25-cc-gn
+      dns-server 10.24.43.135
+      domain-name building-3.rcomp-24-25-dh-g2
   exit
   ```
 
@@ -52,8 +52,8 @@ ip dhcp excluded-address 10.24.41.1
   ip dhcp pool b3-f1
       default-router 10.24.42.1
       network 10.24.42.0 255.255.255.0
-      dns-server 10.24.43.130
-      domain-name building-3.rcomp-24-25-cc-gn
+      dns-server 10.24.43.135
+      domain-name building-3.rcomp-24-25-dh-g2
   exit
   ```
 
@@ -63,8 +63,8 @@ ip dhcp excluded-address 10.24.41.1
   ip dhcp pool b3-wifi
       default-router 10.24.40.1
       network 10.24.40.0 255.255.255.0
-      dns-server 10.24.43.130
-      domain-name building-3.rcomp-24-25-cc-gn
+      dns-server 10.24.43.135
+      domain-name building-3.rcomp-24-25-dh-g2
   exit
   ```
 
@@ -78,8 +78,8 @@ ip dhcp excluded-address 10.24.41.1
   ip dhcp pool b3-voip
       default-router 10.24.41.1
       network 10.24.41.0 255.255.255.0
-      dns-server 10.24.43.130
-      domain-name building-3.rcomp-24-25-cc-gn
+      dns-server 10.24.43.135
+      domain-name building-3.rcomp-24-25-dh-g2
       option 150 ip 10.24.41.1
   exit
   ```
@@ -100,11 +100,10 @@ ip dhcp excluded-address 10.24.41.1
 
   ```
   telephony-service
-      auto-reg-ephone
       ip source-address 10.24.41.1 port 2000
       max-ephones 20
       max-dn 20
-      auto assign 11 to 20
+      auto assign 1 to 2
   exit
 
   ephone-dn 1
@@ -149,9 +148,9 @@ ip dhcp excluded-address 10.24.41.1
 
 ## 5. DNS
 
-* **Server-DNS-B3-F0:** `10.24.43.130 /26`
-* **DNS Domain Name:** `rcomp-24-25-cc-gn`
-* **DNS Local Domain Name:** `building-3.rcomp-24-25-cc-gn`
+* **Server-DNS-B3-F0:** `10.24.43.135 /26`
+* **DNS Domain Name:** `rcomp-24-25-dh-g2`
+* **DNS Local Domain Name:** `building-3.rcomp-24-25-dh-g2`
 
 ### **DNS Records for Building 3**:
 
@@ -187,12 +186,12 @@ interface FastEthernet1/0.390
 
 ```bash
 # Redirect HTTP/HTTPS requests to our internal HTTPS server
-ip nat inside source static tcp 10.24.43.130 80 10.24.44.4 80
-ip nat inside source static tcp 10.24.43.130 443 10.24.44.4 443
+ip nat inside source static tcp 10.24.43.145 80 10.24.44.4 80
+ip nat inside source static tcp 10.24.43.145 443 10.24.44.4 443
 
 # Redirect DNS requests to our internal DNS server
-ip nat inside source static tcp 10.24.43.130 53 10.24.44.4 53
-ip nat inside source static udp 10.24.43.130 53 10.24.44.4 53
+ip nat inside source static tcp 10.24.43.135 53 10.24.44.4 53
+ip nat inside source static udp 10.24.43.135 53 10.24.44.4 53
 ```
 
 ## 7. Static Firewall (ACLs)

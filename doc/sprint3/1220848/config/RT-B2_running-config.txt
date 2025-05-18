@@ -12,7 +12,6 @@ hostname RT-B2
 ip dhcp excluded-address 10.24.38.1
 ip dhcp excluded-address 10.24.37.129
 ip dhcp excluded-address 10.24.36.1
-ip dhcp excluded-address 10.24.38.129
 ip dhcp excluded-address 10.24.38.129 10.24.38.190
 ip dhcp excluded-address 10.24.37.1
 !
@@ -79,43 +78,36 @@ interface FastEthernet0/1
 !
 interface FastEthernet1/0
  no ip address
- no shutdown
 !
 interface FastEthernet1/0.390
  encapsulation dot1Q 390
  ip address 10.24.44.3 255.255.255.0
  ip nat outside
- no shutdown
 !
 interface FastEthernet1/0.396
  encapsulation dot1Q 396
  ip address 10.24.38.1 255.255.255.128
  ip nat inside
- no shutdown
 !
 interface FastEthernet1/0.397
  encapsulation dot1Q 397
  ip address 10.24.37.129 255.255.255.128
  ip nat inside
- no shutdown
 !
 interface FastEthernet1/0.398
  encapsulation dot1Q 398
  ip address 10.24.36.1 255.255.255.0
  ip nat inside
- no shutdown
 !
 interface FastEthernet1/0.399
  encapsulation dot1Q 399
  ip address 10.24.38.129 255.255.255.192
  ip nat inside
- no shutdown
 !
 interface FastEthernet1/0.400
  encapsulation dot1Q 400
  ip address 10.24.37.1 255.255.255.128
  ip nat inside
- no shutdown
 !
 interface Vlan1
  no ip address
@@ -123,17 +115,15 @@ interface Vlan1
 !
 router ospf 1
  router-id 10.24.44.3
+ log-adjacency-changes
  network 10.24.44.0 0.0.0.255 area 0
  network 10.24.36.0 0.0.3.255 area 2
 !
-ip nat inside source static tcp 10.24.38.140 80 10.24.44.3 80
-ip nat inside source static tcp 10.80.163.35 443 10.24.44.3 443
-ip nat inside source static tcp 10.24.38.140 53 10.24.44.3 53
-ip nat inside source static udp 10.24.38.140 53 10.24.44.3 53
+ip nat inside source static tcp 10.24.38.145 80 10.24.44.3 80 
+ip nat inside source static tcp 10.24.38.145 443 10.24.44.3 443 
+ip nat inside source static tcp 10.24.38.140 53 10.24.44.3 53 
+ip nat inside source static udp 10.24.38.140 53 10.24.44.3 53 
 ip classless
-ip route 10.24.32.0 255.255.252.0 10.24.44.2
-ip route 10.24.40.0 255.255.252.0 10.24.44.4
-ip route 0.0.0.0 0.0.0.0 10.24.44.1
 !
 ip flow-export version 9
 !
@@ -156,10 +146,10 @@ dial-peer voice 3 voip
  session target ipv4:10.24.44.4
 !
 telephony-service
- max-ephones 30
- max-dn 30
+ max-ephones 20
+ max-dn 20
  ip source-address 10.24.37.1 port 2000
- auto assign 1 to 20
+ auto assign 1 to 2
 !
 ephone-dn 1
  number 2001
