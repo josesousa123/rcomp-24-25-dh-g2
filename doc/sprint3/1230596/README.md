@@ -16,10 +16,6 @@
 
 - **Server-HTTP-B1-F0:** `10.24.32.15 /25`
 
-### **Home Page for Building 2**:
-
-![b1-html-page](./config/b1-html-page.png)
-
 ## 3. DHCPv4 service
 
 ### Excluded Addresses
@@ -137,10 +133,6 @@ ip dhcp excluded-address 10.24.33.1
     exit
     ```
 
-### **Calling IP_Phone2 (2002) with IP_Phone1 (2001)**:
-
-![b2-voip-service](./config/b2-voip-service.png)
-
 
 ## 5. DNS
 
@@ -150,7 +142,7 @@ ip dhcp excluded-address 10.24.33.1
 
 ### **DNS Records for Building 2**:
 
-![b2-dns-service](./config/b2-dns-service.png)
+![b1-dns-service](./b1-dns-service.png)
 
 ## 6. NAT (Network Address Translation)
 
@@ -179,7 +171,7 @@ interface FastEthernet1/0.390
 
 ## Redirection
 
-```bash
+```
 # Redirect HTTP/HTTPS requests to our internal HTTPS server
 ip nat inside source static tcp 10.24.38.145 80 10.24.44.3 80 
 ip nat inside source static tcp 10.24.38.145 443 10.24.44.3 443 
@@ -191,6 +183,4 @@ ip nat inside source static udp 10.24.38.140 53 10.24.44.3 53
 ```
 
 ## 7. Static Firewall (ACLs)
-
-// TODO
 

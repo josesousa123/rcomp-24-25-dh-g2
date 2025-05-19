@@ -178,5 +178,107 @@ line vty 0 4
 !
 !
 !
+! Access List for Floor 0 (VLAN 396)
+no access-list 101
+access-list 101 deny ip any host 10.24.38.1
+access-list 101 deny ip any host 10.24.37.129
+access-list 101 deny ip any host 10.24.36.1
+access-list 101 deny ip any host 10.24.37.1
+access-list 101 deny ip any host 10.24.38.129
+access-list 101 permit icmp any 10.24.38.128 0.0.0.63 echo-reply
+access-list 101 permit tcp any 10.24.38.128 0.0.0.63 eq 80
+access-list 101 permit tcp any 10.24.38.128 0.0.0.63 eq 443
+access-list 101 permit tcp any 10.24.38.128 0.0.0.63 eq 53
+access-list 101 permit udp any 10.24.38.128 0.0.0.63 eq 53
+access-list 101 deny ip any 10.24.38.128 0.0.0.63
+access-list 101 permit ip 10.24.38.0 0.0.0.127 any
+access-list 101 permit udp any eq bootpc any eq bootps
+!
+! Access List for Floor 1 (VLAN 397)
+no access-list 102
+access-list 102 deny ip any host 10.24.38.1
+access-list 102 deny ip any host 10.24.37.129
+access-list 102 deny ip any host 10.24.36.1
+access-list 102 deny ip any host 10.24.37.1
+access-list 102 deny ip any host 10.24.38.129
+access-list 102 permit icmp any 10.24.38.128 0.0.0.63 echo-reply
+access-list 102 permit tcp any 10.24.38.128 0.0.0.63 eq 80
+access-list 102 permit tcp any 10.24.38.128 0.0.0.63 eq 443
+access-list 102 permit tcp any 10.24.38.128 0.0.0.63 eq 53
+access-list 102 permit udp any 10.24.38.128 0.0.0.63 eq 53
+access-list 102 deny ip any 10.24.38.128 0.0.0.63
+access-list 102 permit ip 10.24.37.128 0.0.0.127 any
+access-list 102 permit udp any eq bootpc any eq bootps
+!
+! Access List for Wi-Fi (VLAN 398)
+no access-list 103
+access-list 103 deny ip any host 10.24.38.1
+access-list 103 deny ip any host 10.24.37.129
+access-list 103 deny ip any host 10.24.36.1
+access-list 103 deny ip any host 10.24.37.1
+access-list 103 deny ip any host 10.24.38.129
+access-list 103 permit icmp any 10.24.38.128 0.0.0.63 echo-reply
+access-list 103 permit tcp any 10.24.38.128 0.0.0.63 eq 80
+access-list 103 permit tcp any 10.24.38.128 0.0.0.63 eq 443
+access-list 103 permit tcp any 10.24.38.128 0.0.0.63 eq 53
+access-list 103 permit udp any 10.24.38.128 0.0.0.63 eq 53
+access-list 103 deny ip any 10.24.38.128 0.0.0.63
+access-list 103 permit ip 10.24.36.0 0.0.0.255 any
+access-list 103 permit udp any eq bootpc any eq bootps
+!
+! Access List for VoIP (VLAN 400)
+no access-list 105
+access-list 105 deny ip any host 10.24.38.1
+access-list 105 deny ip any host 10.24.37.129
+access-list 105 deny ip any host 10.24.36.1
+access-list 105 deny ip any host 10.24.38.129
+access-list 105 permit icmp any 10.24.38.128 0.0.0.63 echo-reply
+access-list 105 permit tcp any 10.24.38.128 0.0.0.63 eq 80
+access-list 105 permit tcp any 10.24.38.128 0.0.0.63 eq 443
+access-list 105 permit tcp any 10.24.38.128 0.0.0.63 eq 53
+access-list 105 permit udp any 10.24.38.128 0.0.0.63 eq 53
+access-list 105 deny ip any 10.24.38.128 0.0.0.63
+access-list 105 permit ip 10.24.37.0 0.0.0.127 any
+access-list 105 permit udp any eq bootpc any eq bootps
+!
+! Access List for Backbone (VLAN 390)
+no access-list 100
+access-list 100 deny ip 10.24.38.128 0.0.0.63 any
+access-list 100 permit tcp any 10.24.38.128 0.0.0.63 eq 80
+access-list 100 permit tcp any 10.24.38.128 0.0.0.63 eq 443
+access-list 100 permit tcp any 10.24.38.128 0.0.0.63 eq 53
+access-list 100 permit udp any 10.24.38.128 0.0.0.63 eq 53
+access-list 100 deny ip 10.24.38.0 0.0.0.127 any
+access-list 100 deny ip any host 10.24.38.1
+access-list 100 permit ip any 10.24.38.0 0.0.0.127
+access-list 100 deny ip 10.24.37.128 0.0.0.127 any
+access-list 100 deny ip any host 10.24.37.129
+access-list 100 permit ip any 10.24.37.128 0.0.0.127
+access-list 100 deny ip 10.24.36.0 0.0.0.255 any
+access-list 100 deny ip any host 10.24.36.1
+access-list 100 permit ip any 10.24.36.0 0.0.0.255
+access-list 100 deny ip 10.24.37.0 0.0.0.127 any
+access-list 100 permit ip any 10.24.37.0 0.0.0.127
+access-list 100 deny ip any host 10.24.38.129
+access-list 100 permit icmp any 10.24.38.128 0.0.0.63 echo-reply
+access-list 100 permit ospf any any
+access-list 100 permit ip any 10.24.44.0 0.0.0.255
+!
+! Apply access lists to interfaces
+interface FastEthernet1/0.396
+ ip access-group 101 in
+!
+interface FastEthernet1/0.397
+ ip access-group 102 in
+!
+interface FastEthernet1/0.398
+ ip access-group 103 in
+!
+interface FastEthernet1/0.400
+ ip access-group 105 in
+!
+interface FastEthernet1/0.390
+ ip access-group 100 in
+!
 end
 

@@ -17,10 +17,6 @@ router ospf 1
 
 * **Server-HTTP-B3-F0:** `10.24.43.145 /26`
 
-### **Home Page for Building 3**:
-
-![b3-html-page](./config/b3-html-page.png)
-
 ## 3. DHCPv4 service
 
 ### Excluded Addresses
@@ -152,10 +148,6 @@ ip dhcp excluded-address 10.24.41.1
 * **DNS Domain Name:** `rcomp-24-25-dh-g2`
 * **DNS Local Domain Name:** `building-3.rcomp-24-25-dh-g2`
 
-### **DNS Records for Building 3**:
-
-![b3-dns-service](./config/b3-dns-service.png)
-
 ## 6. NAT (Network Address Translation)
 
 ### Interface configuration
@@ -184,7 +176,7 @@ interface FastEthernet1/0.390
 
 ## Redirection
 
-```bash
+```
 # Redirect HTTP/HTTPS requests to our internal HTTPS server
 ip nat inside source static tcp 10.24.43.145 80 10.24.44.4 80
 ip nat inside source static tcp 10.24.43.145 443 10.24.44.4 443
@@ -196,4 +188,3 @@ ip nat inside source static udp 10.24.43.135 53 10.24.44.4 53
 
 ## 7. Static Firewall (ACLs)
 
-// TODO
