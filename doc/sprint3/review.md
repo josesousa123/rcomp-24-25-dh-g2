@@ -19,26 +19,45 @@ RCOMP 2024-2025 - Sprint 3 Review
 - 🟡 Partially implemented, no issues
 - ❌ Partially implemented, with issues
 
-### Building 1 ###
+## 🏢 Building 1 – Assigned to `1230596`
 
-| Task Component                | Status | Notes |
-|-------------------------------|--------|-------|
-| Building 1 Layer Two          | ✅      | 5     |
-| Building 1 Layer Three        | ✅      | 5     |
-| Campus integration simulation | ✅      | 5     |
+| Step                       | Status | Notes |
+|---------------------------|-------|-------|
+| 1. OSPF dynamic routing    | ✅     | 5     |
+| 2. HTTP servers           | ✅     | 5     |
+| 3. DHCPv4 service         | ✅     | 5     |
+| 4. VoIP service           | ✅     | 5     |
+| 5. DNS                    | ✅     | 5     |
+| 6. NAT                    | ✅     | 5     |
+| 7. Static Firewall (ACLs) |  ❌     | 3     |
 
-### Building 2 ###
+---
 
-| Task Component         | Status | Notes |
-|------------------------|--------|-------|
-| Building 2 Layer Two   | ✅      | 5     |
-| Building 2 Layer Three | ✅      | 5     |
+## 🏢 Building 2 – Assigned to `1220848`
 
-### Building 3 ###
+| Step                       | Status | Notes |
+|---------------------------|-------|-------|
+| 1. OSPF dynamic routing    | ✅     | 5     |
+| 2. HTTP servers           | ✅     | 5     |
+| 3. DHCPv4 service         | ✅     | 5     |
+| 4. VoIP service           | ✅     | 5     |
+| 5. DNS                    | ✅     | 5     |
+| 6. NAT                    | ✅     | 5     |
+| 7. Static Firewall (ACLs) | ❌      | 3     |
+| Campus integration simulation | ✅     | 5     |
 
-| Task Component         | Status | Notes |
-|------------------------|--------|-------|
-| Building 3 Layer Two   | ✅      | 5     |
-| Building 3 Layer Three | ✅      | 5     |
+---
+
+## 🏢 Building 3 – Assigned to `1230595`
+
+| Step                       | Status | Notes |
+|---------------------------|-------|-------|
+| 1. OSPF dynamic routing    | ✅     | 5     |
+| 2. HTTP servers           | ✅     | 5     |
+| 3. DHCPv4 service         | ✅     | 5     |
+| 4. VoIP service           | ✅     | 5     |
+| 5. DNS                    | ✅     | 5     |
+| 6. NAT                    | ✅     | 5     |
+| 7. Static Firewall (ACLs) | ❌      | 3     |
 
 ---

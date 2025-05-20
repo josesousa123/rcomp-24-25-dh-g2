@@ -145,7 +145,6 @@ ip dhcp excluded-address 10.24.41.1
 ## 5. DNS
 
 * **Server-DNS-B3-F0:** `10.24.43.135 /26`
-* **DNS Domain Name:** `rcomp-24-25-dh-g2`
 * **DNS Local Domain Name:** `building-3.rcomp-24-25-dh-g2`
 
 ## 6. NAT (Network Address Translation)

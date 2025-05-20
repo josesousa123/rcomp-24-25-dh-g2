@@ -82,6 +82,7 @@ interface FastEthernet1/0
 interface FastEthernet1/0.390
  encapsulation dot1Q 390
  ip address 10.24.44.2 255.255.255.0
+ ip access-group 100 in
  ip nat outside
 !
 interface FastEthernet1/0.391
@@ -129,6 +130,25 @@ ip classless
 ip flow-export version 9
 !
 !
+access-list 100 deny ip 2.23.163.192 8.8.8.63 any
+access-list 100 deny ip 10.23.163.128 0.0.0.63 any
+access-list 100 deny ip 10.23.162.128 0.0.0.127 any
+access-list 100 deny ip 10.23.162.0 0.0.0.127 any
+access-list 100 deny ip 10.23.163.0 0.0.0.127 any
+access-list 100 permit icmp any any echo
+access-list 100 permit icmp any any echo-reply
+access-list 100 permit tcp any host 10.23.168.10 eq www
+access-list 100 permit tcp any host 10.23.168.10 eq 443
+access-list 100 permit udp any host 10.23.168.10 eq domain
+access-list 100 permit udp any eq bootpc any eq bootps
+access-list 100 permit udp any eq bootps any eq bootpc
+access-list 100 permit ospf any any
+access-list 100 permit udp any any eq tftp
+access-list 100 permit tcp any any eq 2000
+access-list 100 deny ip any host 10.23.163.193
+access-list 100 deny ip any host 18.23.163.129
+access-list 100 deny ip any host 10.23.162.129
+access-list 100 deny ip any host 18.23.163.1
 !
 !
 !

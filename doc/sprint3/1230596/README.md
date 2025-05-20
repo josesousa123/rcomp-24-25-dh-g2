@@ -138,7 +138,6 @@ ip dhcp excluded-address 10.24.33.1
 
 - **Server-DNS-B1-F0:** `10.24.32.10 /25`
 - **DNS Domain Name:** `rcomp-24-25-dh-g2`
-- **DNS Local Domain Name:** `building-2.rcomp-24-25-dh-g2`
 
 ### **DNS Records for Building 2**:
 
