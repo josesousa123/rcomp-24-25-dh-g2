@@ -142,7 +142,7 @@ ip dhcp excluded-address 10.24.33.1
 
 ### **DNS Records for Building 2**:
 
-![b1-dns-service](./b1-dns-service.png)
+![b1-dns-service](config/b1-dns-service.png)
 
 ## 6. NAT (Network Address Translation)
 
