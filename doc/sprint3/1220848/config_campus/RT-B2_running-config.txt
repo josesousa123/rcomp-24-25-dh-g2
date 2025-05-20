@@ -1,0 +1,242 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname RT-B2
+!
+!
+!
+!
+ip dhcp excluded-address 10.24.38.1
+ip dhcp excluded-address 10.24.37.129
+ip dhcp excluded-address 10.24.36.1
+ip dhcp excluded-address 10.24.38.129 10.24.38.190
+ip dhcp excluded-address 10.24.37.1
+!
+ip dhcp pool b2-f0
+ network 10.24.38.0 255.255.255.128
+ default-router 10.24.38.1
+ dns-server 10.24.38.140
+ domain-name building-2.rcomp-24-25-dh-g2
+ip dhcp pool b2-f1
+ network 10.24.37.128 255.255.255.128
+ default-router 10.24.37.129
+ dns-server 10.24.38.140
+ domain-name building-2.rcomp-24-25-dh-g2
+ip dhcp pool b2-wifi
+ network 10.24.36.0 255.255.255.0
+ default-router 10.24.36.1
+ dns-server 10.24.38.140
+ domain-name building-2.rcomp-24-25-dh-g2
+ip dhcp pool b2-voip
+ network 10.24.37.0 255.255.255.128
+ default-router 10.24.37.1
+ option 150 ip 10.24.37.1
+ dns-server 10.24.38.140
+ domain-name building-2.rcomp-24-25-dh-g2
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+license udi pid CISCO2811/K9 sn FTX10175J1W-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface FastEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface FastEthernet1/0
+ no ip address
+!
+interface FastEthernet1/0.390
+ encapsulation dot1Q 390
+ ip address 10.24.44.3 255.255.255.0
+ ip access-group 100 in
+ ip nat outside
+!
+interface FastEthernet1/0.396
+ encapsulation dot1Q 396
+ ip address 10.24.38.1 255.255.255.128
+ ip access-group 101 in
+ ip nat inside
+!
+interface FastEthernet1/0.397
+ encapsulation dot1Q 397
+ ip address 10.24.37.129 255.255.255.128
+ ip access-group 102 in
+ ip nat inside
+!
+interface FastEthernet1/0.398
+ encapsulation dot1Q 398
+ ip address 10.24.36.1 255.255.255.0
+ ip access-group 103 in
+ ip nat inside
+!
+interface FastEthernet1/0.399
+ encapsulation dot1Q 399
+ ip address 10.24.38.129 255.255.255.192
+ ip access-group 104 in
+ ip nat inside
+!
+interface FastEthernet1/0.400
+ encapsulation dot1Q 400
+ ip address 10.24.37.1 255.255.255.128
+ ip access-group 105 in
+ ip nat inside
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ router-id 10.24.44.3
+ log-adjacency-changes
+ network 10.24.44.0 0.0.0.255 area 0
+ network 10.24.36.0 0.0.3.255 area 2
+!
+ip nat inside source static tcp 10.24.38.145 80 10.24.44.3 80 
+ip nat inside source static tcp 10.24.38.145 443 10.24.44.3 443 
+ip nat inside source static tcp 10.24.38.140 53 10.24.44.3 53 
+ip nat inside source static udp 10.24.38.140 53 10.24.44.3 53 
+ip classless
+!
+ip flow-export version 9
+!
+!
+access-list 100 deny ip 10.24.38.0 0.0.0.127 any
+access-list 100 deny ip 10.24.37.0 0.0.0.255 any
+access-list 100 deny ip 10.24.36.0 0.0.0.255 any
+access-list 100 permit icmp any any echo
+access-list 100 permit icmp any any echo-reply
+access-list 100 permit tcp any host 10.24.38.10 eq www
+access-list 100 permit tcp any host 10.24.38.10 eq 443
+access-list 100 permit udp any host 10.24.38.10 eq domain
+access-list 100 permit udp any eq bootpc any eq bootps
+access-list 100 permit udp any eq bootps any eq bootpc
+access-list 100 permit ospf any any
+access-list 100 permit udp any any eq tftp
+access-list 100 permit tcp any any eq 2000
+access-list 100 deny ip any host 10.24.44.3
+access-list 100 deny ip any host 10.24.38.1
+access-list 100 deny ip any host 10.24.37.1
+access-list 100 permit ip any any
+access-list 101 permit ip 10.24.38.0 0.0.0.127 any
+access-list 101 permit icmp any any echo
+access-list 101 permit icmp any any echo-reply
+access-list 101 permit udp any eq bootpc any eq bootps
+access-list 101 permit udp any eq bootps any eq bootpc
+access-list 101 permit ospf 10.24.38.0 0.0.0.127 any
+access-list 101 deny ip any host 10.24.38.1
+access-list 101 permit ip any any
+access-list 102 permit ip 10.24.37.128 0.0.0.127 any
+access-list 102 permit icmp any any echo
+access-list 102 permit icmp any any echo-reply
+access-list 102 permit udp any eq bootpc any eq bootps
+access-list 102 permit udp any eq bootps any eq bootpc
+access-list 102 permit ospf 10.24.37.128 0.0.0.127 any
+access-list 102 deny ip any host 10.24.37.129
+access-list 102 permit ip any any
+access-list 103 permit ip 10.24.36.0 0.0.0.255 any
+access-list 103 permit icmp any any echo
+access-list 103 permit icmp any any echo-reply
+access-list 103 permit udp any eq bootpc any eq bootps
+access-list 103 permit udp any eq bootps any eq bootpc
+access-list 103 permit ospf 10.24.36.0 0.0.0.255 any
+access-list 103 deny ip any host 10.24.36.1
+access-list 103 permit ip any any
+access-list 104 permit icmp any any echo
+access-list 104 permit icmp any any echo-reply
+access-list 104 permit udp any host 10.24.38.10 eq domain
+access-list 104 permit tcp any host 10.24.38.10 eq www
+access-list 104 permit tcp any host 10.24.38.10 eq 443
+access-list 105 permit ip 10.24.37.0 0.0.0.255 any
+access-list 105 permit icmp any any echo
+access-list 105 permit icmp any any echo-reply
+access-list 105 permit udp any eq bootpc any eq bootps
+access-list 105 permit udp any eq bootps any eq bootpc
+access-list 105 permit ospf 10.24.37.0 0.0.0.255 any
+access-list 105 deny ip any host 10.24.37.1
+access-list 105 permit ip any any
+!
+!
+!
+!
+!
+dial-peer voice 1 voip
+ destination-pattern 1...
+ session target ipv4:10.24.44.2
+!
+dial-peer voice 2 voip
+ destination-pattern 2...
+ session target ipv4:10.24.44.3
+!
+dial-peer voice 3 voip
+ destination-pattern 3...
+ session target ipv4:10.24.44.4
+!
+telephony-service
+ max-ephones 20
+ max-dn 20
+ ip source-address 10.24.37.1 port 2000
+ auto assign 1 to 2
+!
+ephone-dn 1
+ number 2001
+!
+ephone-dn 2
+ number 2002
+!
+ephone 1
+ device-security-mode none
+ mac-address 0007.EC1D.6A61
+ type 7960
+ button 1:1
+!
+ephone 2
+ device-security-mode none
+ mac-address 0002.16BC.4EE4
+ type 7960
+ button 1:2
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+

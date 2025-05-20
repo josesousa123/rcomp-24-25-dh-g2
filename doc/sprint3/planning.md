@@ -63,4 +63,5 @@ RCOMP 2024-2025 Project - Sprint 3 planning
 - [Building 1 Details](1230596/README.md)
 - [Building 2 Details](1220848/README.md)
 - [Building 3 Details](1230595/README.md)
+- [Firewall Details](1220848/README(Firewall).md)
 ---
